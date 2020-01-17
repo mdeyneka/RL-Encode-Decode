@@ -2,12 +2,12 @@
 #include <string>
 #include <sstream>
 
-std::string encode(std::string input)
+std::string encode(const std::string& input)
 {
     std::ostringstream result;
-    std::string::iterator temp = input.begin();
+    std::string::const_iterator temp = input.begin();
     int count = 1;
-    for(std::string::iterator it = std::next(input.begin()); it != input.end(); ++it)
+    for(std::string::const_iterator it = std::next(input.begin()); it != input.end(); ++it)
     {
         if(*temp != *it)
         {
@@ -22,10 +22,10 @@ std::string encode(std::string input)
     return result.str();
 }
 
-std::string decode(std::string input)
+std::string decode(const std::string& input)
 {
     std::ostringstream temp, result;
-    for(std::string::iterator it = input.begin(); it != input.end(); ++it)
+    for(std::string::const_iterator it = input.begin(); it != input.end(); ++it)
     {
         if(!isdigit(*it))
         {
