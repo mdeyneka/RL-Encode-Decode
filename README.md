@@ -11,6 +11,8 @@ Code usage
     > std::string line = "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW";
     > std::string encoded = encode(line);
 	
+ Result: 12W1B12W3B24W1B14W
+	
  For decode:
    
     > std::string decoded = decode(encoded);
